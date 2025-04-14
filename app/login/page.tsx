@@ -62,7 +62,7 @@ export default function LoginPage() {
         <Card className="backdrop-blur-lg bg-white/90 shadow-xl">
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl font-bold text-center">
-              登录系统
+              登录账号系统
             </CardTitle>
             <CardDescription className="text-center">
               请输入您的账号密码
