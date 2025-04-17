@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Loader2, Download } from "lucide-react";
+import Image from "next/image";
 
 // Context for managing button states
 const DashboardContext = createContext<{
@@ -170,7 +171,17 @@ export default function DashboardPage() {
     <DashboardContext.Provider value={{ buttonStates, setButtonState }}>
       <div className="min-h-screen bg-gray-50 p-8">
         <div className="mx-auto max-w-7xl">
-          <h1 className="mb-8 text-3xl font-bold">账号管理</h1>
+          <div className="flex items-center mb-8">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/logo.jpg"
+                alt="Quaniverse Logo"
+                width={40}
+                height={40}
+              />
+              <h1 className="text-3xl font-bold">Quaniverse 账号管理</h1>
+            </div>
+          </div>
           <div className="rounded-lg border bg-white shadow">
             <Table>
               <TableHeader className="bg-gray-50">

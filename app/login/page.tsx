@@ -22,6 +22,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import Image from "next/image";
 
 const loginSchema = z.object({
   username: z.string().min(1, "用户名不能为空"),
@@ -61,8 +62,21 @@ export default function LoginPage() {
       <div className="w-full max-w-md p-4 animate-fade-in">
         <Card className="backdrop-blur-lg bg-white/90 shadow-xl">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl font-bold text-center">
-              登录账号系统
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/logo.jpg"
+                alt="Quaniverse Logo"
+                width={80}
+                height={80}
+                className="mb-4"
+              />
+              <CardTitle className="text-2xl font-bold text-center">
+                Quaniverse
+              </CardTitle>
+            </div>
+            <div className="h-[1px] bg-gray-200 my-4"></div>
+            <CardTitle className="text-xl font-bold text-center">
+              账号登录
             </CardTitle>
             <CardDescription className="text-center">
               请输入您的账号密码
